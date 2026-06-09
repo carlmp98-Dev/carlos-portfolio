@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternity - Digital Wedding Invitation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        invite: {
+                            dark: '#1a1a1a',
+                            gold: '#D4AF37',
+                            light: '#FAF9F6'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        display: ['Cinzel', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; background-color: #1a1a1a; color: #FAF9F6; }
+        .hero-bg {
+            background-image: linear-gradient(to bottom, rgba(26, 26, 26, 0.3) 0%, rgba(26, 26, 26, 0.8) 100%), url('../assets/img/invitation-hero.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .gold-text-gradient {
+            background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- PORTFOLIO NAVIGATION BAR (Fixed) -->
+    <div class="fixed top-0 left-0 w-full bg-black text-white z-50 border-b border-gray-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between text-sm">
+            <a href="../index.html" class="flex items-center text-gray-300 hover:text-white transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Carlos' Portfolio
+            </a>
+            <div class="flex items-center space-x-4">
+                <span class="hidden md:inline text-gray-400">Live Demo: Digital Invitation</span>
+                <a href="https://www.fiverr.com/users/carl_morape" target="_blank" class="bg-invite-gold hover:bg-yellow-600 text-black px-4 py-1.5 rounded font-bold transition-colors">
+                    Hire me on Fiverr
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN INVITATION CONTENT -->
+    <div class="pt-12">
+        
+        <!-- Hero Section -->
+        <section class="hero-bg min-h-screen flex items-center justify-center relative text-center px-4">
+            <div class="absolute inset-0 bg-black/40"></div>
+            
+            <div class="relative z-10 max-w-3xl mx-auto py-20">
+                <p class="font-sans text-sm tracking-[0.3em] uppercase text-invite-light mb-8">Together with their families</p>
+                
+                <h1 class="font-display text-5xl md:text-8xl mb-6 gold-text-gradient">Elena & James</h1>
+                
+                <p class="font-serif italic text-2xl md:text-3xl text-invite-light mb-12">invite you to celebrate their wedding</p>
+                
+                <div class="font-sans border-y border-invite-gold/50 py-6 my-10 px-10 inline-block">
+                    <p class="text-xl tracking-widest text-invite-gold mb-2">OCTOBER 24, 2026</p>
+                    <p class="text-sm tracking-widest text-invite-light/70 uppercase">at four o'clock in the afternoon</p>
+                </div>
+                
+                <div class="mt-8">
+                    <a href="#rsvp" class="inline-block border-2 border-invite-gold text-invite-gold hover:bg-invite-gold hover:text-black px-10 py-3 uppercase tracking-widest text-sm transition-all duration-500">RSVP Here</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Details Section -->
+        <section class="py-24 bg-invite-light text-invite-dark text-center">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="font-display text-4xl mb-16 text-invite-dark">The Celebration</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                    <div>
+                        <i class="fas fa-church text-3xl text-invite-gold mb-6"></i>
+                        <h3 class="font-serif italic text-3xl mb-4">The Ceremony</h3>
+                        <p class="font-sans text-sm tracking-wider uppercase mb-2">St. Patrick's Cathedral</p>
+                        <p class="font-sans text-sm text-gray-600 mb-6">5th Avenue, New York, NY</p>
+                        <a href="#" class="text-invite-gold text-xs uppercase tracking-widest hover:text-invite-dark transition-colors border-b border-invite-gold pb-1">View Map</a>
+                    </div>
+                    
+                    <div>
+                        <i class="fas fa-glass-cheers text-3xl text-invite-gold mb-6"></i>
+                        <h3 class="font-serif italic text-3xl mb-4">The Reception</h3>
+                        <p class="font-sans text-sm tracking-wider uppercase mb-2">The Plaza Hotel</p>
+                        <p class="font-sans text-sm text-gray-600 mb-6">Dinner and dancing to follow</p>
+                        <a href="#" class="text-invite-gold text-xs uppercase tracking-widest hover:text-invite-dark transition-colors border-b border-invite-gold pb-1">View Map</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RSVP Section -->
+        <section id="rsvp" class="py-24 bg-invite-dark relative border-t border-invite-gold/20">
+            <div class="max-w-2xl mx-auto px-4 text-center">
+                <h2 class="font-display text-4xl mb-4 gold-text-gradient">RSVP</h2>
+                <p class="font-serif italic text-xl text-invite-light/70 mb-10">Kindly respond by September 1st, 2026</p>
+                
+                <form class="space-y-6">
+                    <div>
+                        <input type="text" class="w-full bg-transparent border-b border-invite-gold/50 py-3 text-invite-light placeholder-invite-light/30 focus:outline-none focus:border-invite-gold font-sans text-sm tracking-wider" placeholder="Guest Name(s)">
+                    </div>
+                    
+                    <div>
+                        <input type="email" class="w-full bg-transparent border-b border-invite-gold/50 py-3 text-invite-light placeholder-invite-light/30 focus:outline-none focus:border-invite-gold font-sans text-sm tracking-wider" placeholder="Email Address">
+                    </div>
+                    
+                    <div class="py-6 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm tracking-wider">
+                        <label class="flex items-center justify-center cursor-pointer group">
+                            <input type="radio" name="attending" class="hidden peer">
+                            <div class="w-4 h-4 border border-invite-gold rounded-full mr-3 peer-checked:bg-invite-gold transition-colors"></div>
+                            <span class="group-hover:text-invite-gold transition-colors">Joyfully Accept</span>
+                        </label>
+                        <label class="flex items-center justify-center cursor-pointer group">
+                            <input type="radio" name="attending" class="hidden peer">
+                            <div class="w-4 h-4 border border-invite-gold rounded-full mr-3 peer-checked:bg-invite-gold transition-colors"></div>
+                            <span class="group-hover:text-invite-gold transition-colors">Regretfully Decline</span>
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <textarea rows="3" class="w-full bg-transparent border-b border-invite-gold/50 py-3 text-invite-light placeholder-invite-light/30 focus:outline-none focus:border-invite-gold font-sans text-sm tracking-wider resize-none" placeholder="Dietary Restrictions / Notes"></textarea>
+                    </div>
+                    
+                    <button type="button" class="mt-8 bg-invite-gold text-black px-12 py-4 uppercase tracking-widest text-sm hover:bg-white transition-colors duration-300">Send Response</button>
+                </form>
+            </div>
+        </section>
+        
+        <footer class="py-8 bg-black text-center text-xs tracking-widest text-invite-light/30 uppercase">
+            Designed by Carlos Morales
+        </footer>
+
+    </div>
+</body>
+</html>

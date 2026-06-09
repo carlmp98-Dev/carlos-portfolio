@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Beauty & Wellness Spa - Live Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        spa: {
+                            light: '#FAF5F5',
+                            rose: '#D4B5B0',
+                            gold: '#C5A880',
+                            dark: '#4A403F'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Lato', sans-serif; background-color: #FAF5F5; color: #4A403F; }
+        h1, h2, h3, h4 { font-family: '"Playfair Display"', serif; }
+        .hero-bg {
+            background-image: linear-gradient(to right, rgba(250, 245, 245, 0.9) 0%, rgba(250, 245, 245, 0.4) 50%, rgba(250, 245, 245, 0.1) 100%), url('../assets/img/spa-hero.png');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- PORTFOLIO NAVIGATION BAR (Fixed) -->
+    <div class="fixed top-0 left-0 w-full bg-[#111] text-white z-50 border-b border-gray-800 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between text-sm">
+            <a href="../index.html" class="flex items-center text-gray-300 hover:text-white transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Carlos' Portfolio
+            </a>
+            <div class="flex items-center space-x-4">
+                <span class="hidden md:inline text-gray-400">Live Demo: Beauty Spa Landing Page</span>
+                <a href="https://www.fiverr.com/users/carl_morape" target="_blank" class="bg-spa-gold hover:bg-yellow-600 text-white px-4 py-1.5 rounded font-bold transition-colors">
+                    Hire me on Fiverr
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN SPA CONTENT (Pushed down to account for fixed navbar) -->
+    <div class="pt-12">
+        
+        <!-- Navigation -->
+        <nav class="bg-spa-light py-6 border-b border-spa-rose/20 relative z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+                <div class="text-3xl font-serif font-bold text-spa-dark tracking-wider">AURA<span class="text-spa-gold text-sm align-top ml-1">SPA</span></div>
+                <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-spa-dark/70 font-semibold">
+                    <a href="#about" class="hover:text-spa-gold transition-colors">About</a>
+                    <a href="#services" class="hover:text-spa-gold transition-colors">Treatments</a>
+                    <a href="#pricing" class="hover:text-spa-gold transition-colors">Pricing</a>
+                </div>
+                <a href="#book" class="bg-spa-dark text-white px-6 py-3 rounded-sm uppercase tracking-wider text-xs hover:bg-spa-gold transition-colors duration-300">Book Appointment</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero-bg h-[80vh] flex items-center relative z-0">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div class="max-w-xl">
+                    <p class="text-spa-gold font-bold tracking-[0.2em] uppercase text-sm mb-4">Wellness & Esthetics</p>
+                    <h1 class="text-5xl md:text-7xl font-serif text-spa-dark leading-tight mb-6">Discover Your Inner Glow</h1>
+                    <p class="text-lg text-spa-dark/80 mb-8 leading-relaxed">Experience ultimate relaxation and rejuvenation at Aura. Our bespoke treatments are designed to restore harmony to your body and mind.</p>
+                    <div class="flex space-x-4">
+                        <a href="#services" class="bg-spa-gold text-white px-8 py-4 rounded-sm uppercase tracking-wider text-sm hover:bg-spa-dark transition-colors duration-300 shadow-lg">View Treatments</a>
+                        <a href="#about" class="border border-spa-dark text-spa-dark px-8 py-4 rounded-sm uppercase tracking-wider text-sm hover:bg-spa-dark hover:text-white transition-colors duration-300">Our Story</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-4xl font-serif text-spa-dark mb-4">Signature Treatments</h2>
+                    <div class="w-16 h-1 bg-spa-gold mx-auto mb-6"></div>
+                    <p class="text-spa-dark/70">Carefully curated services using organic, premium products to ensure the highest level of care for your skin and body.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Service 1 -->
+                    <div class="group cursor-pointer">
+                        <div class="aspect-[4/5] bg-spa-light mb-6 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-spa-gold/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                            <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Massage" class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <h3 class="text-2xl font-serif text-spa-dark mb-2 text-center group-hover:text-spa-gold transition-colors">Holistic Massage</h3>
+                        <p class="text-center text-sm text-spa-dark/60">Relieve tension and restore balance with our signature deep tissue and Swedish massage blends.</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="group cursor-pointer">
+                        <div class="aspect-[4/5] bg-spa-light mb-6 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-spa-gold/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Facial" class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <h3 class="text-2xl font-serif text-spa-dark mb-2 text-center group-hover:text-spa-gold transition-colors">Organic Facials</h3>
+                        <p class="text-center text-sm text-spa-dark/60">Customized skin therapies using botanical extracts to cleanse, exfoliate, and hydrate.</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="group cursor-pointer">
+                        <div class="aspect-[4/5] bg-spa-light mb-6 overflow-hidden relative">
+                            <div class="absolute inset-0 bg-spa-gold/10 group-hover:bg-transparent transition-colors duration-500"></div>
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Aromatherapy" class="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <h3 class="text-2xl font-serif text-spa-dark mb-2 text-center group-hover:text-spa-gold transition-colors">Aromatherapy</h3>
+                        <p class="text-center text-sm text-spa-dark/60">Essential oil infusions designed to elevate your mood and promote deep mental clarity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section (CTA) -->
+        <section id="book" class="py-24 bg-spa-rose/10">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-serif text-spa-dark mb-6">Ready to Relax?</h2>
+                <p class="text-lg text-spa-dark/70 mb-10">Reserve your tranquil escape today. Fill out the form below and our concierge will contact you to confirm your appointment.</p>
+                
+                <form class="bg-white p-10 rounded shadow-sm text-left">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-spa-dark/60 mb-2">First Name</label>
+                            <input type="text" class="w-full border-b border-spa-rose/30 py-2 focus:outline-none focus:border-spa-gold transition-colors bg-transparent" placeholder="Jane">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-spa-dark/60 mb-2">Last Name</label>
+                            <input type="text" class="w-full border-b border-spa-rose/30 py-2 focus:outline-none focus:border-spa-gold transition-colors bg-transparent" placeholder="Doe">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-spa-dark/60 mb-2">Email Address</label>
+                            <input type="email" class="w-full border-b border-spa-rose/30 py-2 focus:outline-none focus:border-spa-gold transition-colors bg-transparent" placeholder="jane@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-spa-dark/60 mb-2">Desired Treatment</label>
+                            <select class="w-full border-b border-spa-rose/30 py-2 focus:outline-none focus:border-spa-gold transition-colors bg-transparent text-spa-dark">
+                                <option>Holistic Massage</option>
+                                <option>Organic Facial</option>
+                                <option>Aromatherapy</option>
+                                <option>Couples Package</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="w-full bg-spa-dark text-white py-4 rounded-sm uppercase tracking-wider text-sm hover:bg-spa-gold transition-colors duration-300 mt-4">Request Appointment</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-spa-dark text-white/60 py-12 text-center text-sm">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="text-2xl font-serif text-white tracking-wider mb-6">AURA<span class="text-spa-gold text-xs align-top ml-1">SPA</span></div>
+                <div class="flex justify-center space-x-6 mb-8 text-white/40">
+                    <i class="fab fa-instagram hover:text-spa-gold cursor-pointer transition-colors text-xl"></i>
+                    <i class="fab fa-facebook-f hover:text-spa-gold cursor-pointer transition-colors text-xl"></i>
+                    <i class="fab fa-pinterest-p hover:text-spa-gold cursor-pointer transition-colors text-xl"></i>
+                </div>
+                <p>&copy; 2026 Aura Beauty Spa. Demo created by Carlos Morales.</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
